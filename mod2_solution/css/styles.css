@@ -2,6 +2,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+	margin:0;
+}
 h2 {
 	margin-bottom:15px;
 	text-align: right;
@@ -28,20 +31,26 @@ h1{
 .lightyellow {
 	background-color: lightyellow;
 }
-section {
+.sectiontitle{
 	border: 1px solid black;
-	position:relative;
-	width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  height: 200px;
-}
-section div {
-    border: 1px solid black;
     position: absolute;
     font-size: 1.5em;
     font-weight: bold;
     right: 15px;
+}
+section {
+	position:relative;
+	width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right:15px;
+ 
+  margin-bottom:15px;
+}
+.sectioncontent{
+    border: 1px solid black;
+    height: 200px;
 }
 section p,section ul,section dl{
 	margin-top:50px;
@@ -49,10 +58,16 @@ section p,section ul,section dl{
     margin-right: auto;
     margin-left: auto;
 }
+section div span {
+	padding-left: 10px;
+	padding-right:10px;
+}
 /* Simple Responsive Framework. */
-.row {
-  width: 100%;
-  margin:15px;
+.row{
+  margin-right:auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left:15px;
 }
 
 /********** Large devices only **********/
