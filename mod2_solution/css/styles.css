@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+/********** Large devices only **********/
+@media (min-width: 992px) {
+	.large {
+		width: 33.33%;
+	}
+}
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.medium {
+		width: 50%;
+	}
+
+}
+/********** Small devices only **********/
+@media (max-width: 767px) {
+	.small{
+		width: 100%;
+	}
+
+}
