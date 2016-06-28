@@ -1,13 +1,14 @@
+/* common css*/
 * {
   box-sizing: border-box;
 }
-/* Simple Responsive Framework. */
-.row {
-  width: 100%;
-}
-heading {
+h2 {
 	margin-bottom:15px;
-
+	text-align: right;
+	border: 1px solid black;
+}
+h1{
+	text-align:center;
 }
 .beige{
 	background-color: beige;
@@ -18,6 +19,42 @@ heading {
 .lightblue{
 	background-color: lightblue;
 }
+.pink{
+	background-color: pink;
+}
+.lightgreen {
+	background-color: lightgreen;
+}
+.lightyellow {
+	background-color: lightyellow;
+}
+section {
+	border: 1px solid black;
+	position:relative;
+	width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 200px;
+}
+section div {
+    border: 1px solid black;
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    right: 15px;
+}
+section p,section ul,section dl{
+	margin-top:50px;
+	width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+  margin:15px;
+}
+
 /********** Large devices only **********/
 @media (min-width: 992px) {
 	.large {
@@ -29,6 +66,10 @@ heading {
 @media (min-width: 768px) and (max-width: 991px) {
 	.medium {
 		width: 50%;
+		float:left;
+	}
+	.mediumlarge{
+		width:100%;
 		float:left;
 	}
 
