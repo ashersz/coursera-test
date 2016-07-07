@@ -1,0 +1,10 @@
+#nav-list{
+	background-color: white;
+	color:black;
+}
+#nav-list li {
+	border:1px solid black;
+}
+#collapsable-nav{
+	width:100%;
+}
