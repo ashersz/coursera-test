@@ -1,0 +1,12 @@
+.message.green {
+  color:green;
+}
+.message.red {
+  color:red;
+}
+.form-control.green {
+  border:1px solid green;
+}
+.form-control.red {
+  border:1px solid red;
+}
