@@ -13,7 +13,7 @@
       if (arr.length > 3) {
         $scope.message = 'Too much!'
       } else {
-        if ($scope.message.length > 0) {
+        if ($scope.lunch_menu.length > 0) {
           $scope.message = 'Enjoy!'
         } else {
           $scope.message = 'Please enter data first'
