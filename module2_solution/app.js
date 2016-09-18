@@ -8,7 +8,7 @@
   ToBuyShoppingController.$inject = ['ShoppingListCheckOffService']
   function ToBuyShoppingController (ShoppingListCheckOffService) {
     var tobuy = this
-    tobuy.tobuy = ShoppingListCheckOffService.tobuy
+    tobuy.tobuy = ShoppingListCheckOffService.getToBuy()
     tobuy.removeItem = function (index) {
       ShoppingListCheckOffService.removeBoughtItem(index)
     }
@@ -23,7 +23,7 @@
   function ShoppingListCheckOffService () {
     var shoppingList = this
 
-    shoppingList.tobuy = [
+    var tobuy = [
       { name: 'cookies', quantity: 10 },
       { name: 'fruits', quantity: 5 },
       { name: 'vegetables', quantity: 3 },
@@ -32,12 +32,15 @@
     ]
     var bought = []
     shoppingList.removeBoughtItem = function (index) {
-      var item = shoppingList.tobuy[index]
-      shoppingList.tobuy.splice(index, 1)
+      var item = tobuy[index]
+      tobuy.splice(index, 1)
       shoppingList.addBoughtItem(item)
     }
     shoppingList.addBoughtItem = function (item) {
       bought.push(item)
+    }
+    shoppingList.getToBuy = function () {
+      return tobuy
     }
     shoppingList.getBought = function () {
       return bought
