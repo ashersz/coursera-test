@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-<body>
+<body ng-app="NarrowItDownApp">
    <div class="container">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
@@ -23,6 +23,21 @@
     <!-- found-items should be implemented as a component -->
     <found-items found-items="...." on-remove="...."></found-items>
   </div>
+  <!-- Libraries -->
+  <script src="lib/jquery-3.1.0.min.js"></script>
+  <script src="lib/angular.min.js"></script>
 
+  <!-- Modules -->
+
+  <script src="narrowsearch/narrow.module.js"></script>
+  <script src="loader/loader.module.js"></script>
+
+  <!-- 'narrowsearch' module artifacts -->
+  <script src="narrowsearch/narrow.component.js"></script>
+  <script src="narrowsearch/narrow.controller.js"></script>
+  <script src="narrowsearch/menusearch.service.js"></script>
+
+  <!-- 'loader' module artifacts -->
+  <script src="loader/loader.component.js"></script>
 </body>
 </html>
