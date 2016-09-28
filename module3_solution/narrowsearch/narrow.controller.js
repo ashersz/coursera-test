@@ -15,7 +15,7 @@
         ctrl.found = response
       })
       .catch(function (error) {
-        console.log('error,' + error.message)
+        console.log('error,' + error.statusText)
       })
       .finally(function () {
         $rootScope.$broadcast('foundItems:processing', { on: false })
