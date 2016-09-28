@@ -12,6 +12,7 @@
   })
   function FoundItemsComponentController () {
     var $ctrl = this
+    $ctrl.myMessage = 'Nothing found'
     $ctrl.remove = function (myIndex) {
       $ctrl.onRemove({ index: myIndex })
     }
