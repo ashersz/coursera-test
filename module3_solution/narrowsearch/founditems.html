@@ -2,7 +2,7 @@
   <div ng-if="$ctrl.foundItems==0">{{ $ctrl.myMessage }}</div>
 <ol>
   <li ng-repeat="item in $ctrl.foundItems track by $index">
-    {{ item }}
+    {{ item.description }}
     <button ng-click="$ctrl.remove($index);">Remove</button>
   </li>
 </ol>

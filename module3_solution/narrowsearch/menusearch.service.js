@@ -16,14 +16,14 @@
         url: (ApiBasePath + '/menu_items.json')
       }).then(function (result) {
         var foundItems = []
-        var length, i, description
+        var length, i, item
     // process result and only keep items that match
         if (result.data && result.data.menu_items) {
           length = result.data.menu_items.length
           for (i = 0; i < length; i++) {
-            description = result.data.menu_items[i].description
-            if (description && description.indexOf(searchTerm) > -1) {
-              foundItems.push(description)
+            item = result.data.menu_items[i]
+            if(searchTerm && searchTerm.length > 0 && item.description && item.description.indexOf(searchTerm) > -1) {
+              foundItems.push(item)
             }
           }
         }
