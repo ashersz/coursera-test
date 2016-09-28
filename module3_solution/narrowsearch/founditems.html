@@ -1,0 +1,8 @@
+<div class="row">
+<ol>
+  <li ng-repeat="item in $ctrl.foundItems track by $index">
+    {{ item }}
+    <button ng-click="$ctrl.remove($index);">Remove</button>
+  </li>
+</ol>
+</div>
