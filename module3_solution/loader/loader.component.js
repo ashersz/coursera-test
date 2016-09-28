@@ -11,9 +11,6 @@
     var $ctrl = this
 
     var cancelListener = $rootScope.$on('foundItems:processing', function (event, data) {
-      console.log('Event: ', event)
-      console.log('Data: ', data)
-
       if (data.on) {
         $element.find('div').css('display', 'block')
       } else {
