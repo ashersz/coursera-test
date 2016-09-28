@@ -18,7 +18,7 @@
         var foundItems = []
         var length, i, description
     // process result and only keep items that match
-        if (result.data.menu_items) {
+        if (result.data && result.data.menu_items) {
           length = result.data.menu_items.length
           for (i = 0; i < length; i++) {
             description = result.data.menu_items[i].description
