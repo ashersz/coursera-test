@@ -1,5 +1,5 @@
 (function () {
   'use strict'
 
-  angular.module('MenuApp', ['ui.router', 'DataMenu'])
+  angular.module('MenuApp', ['ui.router', 'MenuData'])
 })()
