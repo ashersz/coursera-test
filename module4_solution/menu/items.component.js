@@ -2,10 +2,10 @@
   'use strict'
 
   angular.module('MenuApp')
-  .component('items', {
-    templateUrl: 'menu/items.html',
+  .component('itemsMenu', {
+    templateUrl: 'templates/items-list.html',
     bindings: {
-      allItems: '<'
+      itemsDetail: '<'
     }
   })
 })()
