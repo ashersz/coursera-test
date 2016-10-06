@@ -4,8 +4,8 @@
   .controller('MenuDataDetailController', MenuDataDetailController)
   MenuDataDetailController.$inject = ['items']
   function MenuDataDetailController (items) {
-    var catDetail = this
-    catDetail.menuItems = items.data.menu_items
-    catDetail.categoryName = items.data.category.name
+    var ctrlDetail = this
+    ctrlDetail.menuItems = items.data.menu_items
+    ctrlDetail.categoryName = items.data.category.name
   }
 })()

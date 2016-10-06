@@ -25,7 +25,7 @@
       .state('items', {
         url: '/items/{shortName}',
         templateUrl: 'templates/items.html',
-        controller: 'MenuDataDetailController as catDetail',
+        controller: 'MenuDataDetailController as ctrlDetail',
         resolve: {
           items: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
             return MenuDataService.getItemsForCategory($stateParams.shortName)
