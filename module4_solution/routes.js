@@ -23,11 +23,11 @@
         }
       })
       .state('items', {
-        url: '/items:{shortName}',
+        url: '/items/{shortName}',
         templateUrl: 'templates/items.html',
         controller: 'MenuDataDetailController as ctrlDetail',
         resolve: {
-          itemsDetail: ['$stateParams', 'MenuDataService', function (MenuDataService, $stateParams) {
+          itemsDetail: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
             return MenuDataService.getItemsForCategory($stateParams.shortName)
           }]
         }
