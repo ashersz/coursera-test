@@ -10,15 +10,15 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'menu/home.html'
+        templateUrl: 'templates/home.html'
       })
       .state('categories', {
         url: '/categories',
-        templateUrl: 'menu/categories.html'
+        templateUrl: 'templates/categories.html'
       })
       .state('items', {
         url: '/items',
-        templateUrl: 'menu/items.html'
+        templateUrl: 'templates/items.html'
       })
   }
 })()
