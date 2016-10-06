@@ -14,11 +14,13 @@
       })
       .state('categories', {
         url: '/categories',
-        templateUrl: 'templates/categories.html'
-      })
-      .state('items', {
-        url: '/items',
-        templateUrl: 'templates/items.html'
+        templateUrl: 'templates/categories.html',
+        controller: 'MenuDataController as ctrl',
+        resolve: {
+          items: ['MenuDataService', function (MenuDataService) {
+            return MenuDataService.getAllCategories()
+          }]
+        }
       })
   }
 })()
