@@ -13,6 +13,7 @@
         url: (ApiBasePath + '/categories.json')
       }).then(function (result) {
         console.log('result.data.length=' + result.data.length)
+        return result
       })
     }
     service.getItemsForCategory = function (categoryShortName) {
@@ -20,7 +21,7 @@
         method: 'GET',
         url: (ApiBasePath + '/menu_items.json?category=' + categoryShortName)
       }).then(function (result) {
-
+        return result
       })
     }
   }
