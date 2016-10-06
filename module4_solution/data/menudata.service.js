@@ -12,7 +12,6 @@
         method: 'GET',
         url: (ApiBasePath + '/categories.json')
       }).then(function (result) {
-        console.log('result.data.length=' + result.data.length)
         return result
       })
     }
