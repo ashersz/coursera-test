@@ -10,7 +10,13 @@
 
     reg.submit = function () {
       reg.completed = true
-      MenuService.getMenuItem(reg.user.menu_item)
+      MenuService.getMenuItem(reg.user.menu_item).then(function (response) {
+        reg.info = 'Your information has been saved'
+        return response
+      }, function (error) {
+        console.log('error= ' + error.statusText)
+        reg.info = 'No such menu number exists'
+      })
     }
   }
 })()

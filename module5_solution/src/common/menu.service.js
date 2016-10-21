@@ -19,7 +19,6 @@
       if (category) {
         config.params = {'category': category}
       }
-
       return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
         return response.data
       })
@@ -27,8 +26,6 @@
     service.getMenuItem = function (menu_item) {
       return $http.get(ApiPath + '/menu_items/' + menu_item + '.json').then(function (response) {
         return response.data
-      }, function (error) {
-        return error
       })
     }
   }
