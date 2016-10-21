@@ -1,9 +1,11 @@
 input {
   font-size: 24px;
   margin-bottom: 10px;
+  color:black;
 }
 button {
   font-size: 24px;
+  color:black;
 }
 
 .ng-touched.ng-valid {
