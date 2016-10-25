@@ -10,7 +10,8 @@
 
     reg.submit = function () {
       reg.completed = true
-      MenuService.getMenuItem(reg.user.menu_item).then(function (response) {
+      MenuService.getMenuItem(reg.user.menu_item_name).then(function (response) {
+        reg.user.menu_item = response
         reg.info = 'Your information has been saved'
         UserInfoService.setUserInfo(reg.user)
         return response

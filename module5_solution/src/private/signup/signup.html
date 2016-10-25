@@ -49,10 +49,10 @@
           Phone must be in the format ###-###-####.
         </span>
         <br>
-        <input type="text" name="menu_item" placeholder="Enter menu item"
-          ng-model="reg.user.menu_item"
+        <input type="text" name="menu_item_name" placeholder="Enter menu item name"
+          ng-model="reg.user.menu_item_name"
           pattern="([A-Z]{1,2}\d{1,2})">
-          <span ng-if="regForm.menu_item.$invalid && regForm.menu_item.$touched">
+          <span ng-if="regForm.menu_item_name.$invalid && regForm.menu_item_name.$touched">
             Menu item short name must be one or two letter long with a number between 1 and 99.
           </span>
           <br>
