@@ -1,5 +1,5 @@
 {
   "standard": {
-    "globals": [ "angular" ]
+    "globals": [ "angular","beforeEach","inject","describe","it","expect" ]
   }
 }
