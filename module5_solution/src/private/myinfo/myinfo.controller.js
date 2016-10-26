@@ -8,7 +8,7 @@
   function MyInfoController (userinfo, ApiPath) {
     var myinfo = this
     myinfo.completed = false
-    myinfo.uncomplete = 'Sign up Now!'
+    myinfo.uncomplete = 'Not Signed Up Yet. Sign up Now!'
     if (userinfo && userinfo.firstname) {
       myinfo.completed = true
       myinfo.userinfo = userinfo

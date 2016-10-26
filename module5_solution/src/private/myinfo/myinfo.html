@@ -3,5 +3,5 @@
   <user-info userinfo="myinfo.userinfo"></user-info>
 </div>
 <div ng-if="!myinfo.completed">
-  {{ myinfo.uncomplete }}
+  <a ui-sref="private.signup">{{ myinfo.uncomplete }}</a>
 </div>

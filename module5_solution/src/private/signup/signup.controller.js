@@ -7,17 +7,19 @@
   SignupController.$inject = ['MenuService', 'UserInfoService']
   function SignupController (MenuService, UserInfoService) {
     var reg = this
-
-    reg.submit = function () {
-      reg.completed = true
+    reg.checkmemu_item = function () {
+      reg.message = ''
       MenuService.getMenuItem(reg.user.menu_item_name).then(function (response) {
         reg.user.menu_item = response
         reg.info = 'Your information has been saved'
         UserInfoService.setUserInfo(reg.user)
       }, function (error) {
         console.log('error= ' + error.statusText)
-        reg.info = 'No such menu number exists'
+        reg.message = 'No such menu number exists'
       })
+    }
+    reg.submit = function () {
+      reg.completed = true
     }
   }
 })()
