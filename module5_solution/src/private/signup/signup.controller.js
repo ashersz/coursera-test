@@ -14,7 +14,6 @@
         reg.user.menu_item = response
         reg.info = 'Your information has been saved'
         UserInfoService.setUserInfo(reg.user)
-        return response
       }, function (error) {
         console.log('error= ' + error.statusText)
         reg.info = 'No such menu number exists'
