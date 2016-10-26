@@ -50,10 +50,13 @@
         </span>
         <br>
         <input type="text" name="menu_item_name" placeholder="Enter menu item name"
-          ng-model="reg.user.menu_item_name"
+          ng-model="reg.user.menu_item_name" ng-blur="reg.checkmemu_item()"
           pattern="([A-Z]{1,2}\d{1,2})">
           <span ng-if="regForm.menu_item_name.$invalid && regForm.menu_item_name.$touched">
             Menu item short name must be one or two letter long with a number between 1 and 99.
+          </span>
+          <span ng-if="reg.message && regForm.menu_item_name.$valid">
+            {{ reg.message }}
           </span>
           <br>
       <button
