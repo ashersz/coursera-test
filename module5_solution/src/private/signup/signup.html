@@ -10,7 +10,6 @@
         required
         minlength="4"
         ng-maxlength="10">
-        {{ reg.user.firstname }}
         <span
           ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
           Firstname must be at least 4 characters long
@@ -24,7 +23,6 @@
           required
           minlength="4"
           ng-maxlength="10">
-          {{ reg.user.lastname }}
           <span
             ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
             Lastname must be at least 4 characters long
@@ -62,10 +60,6 @@
       <button
         ng-disabled="regForm.$invalid"
         ng-click="reg.submit()">Submit</button>
-
-        <div style="margin-top: 10px;">
-          Form valid? {{ regForm.$valid }}
-        </div>
     </form>
   </fieldset>
 
