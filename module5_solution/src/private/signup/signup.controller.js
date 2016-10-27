@@ -9,6 +9,7 @@
     var reg = this
     reg.checkmemu_item = function () {
       reg.message = ''
+      reg.user.menu_item = {}
       MenuService.getMenuItem(reg.user.menu_item_name).then(function (response) {
         reg.user.menu_item = response
       }, function (error) {
