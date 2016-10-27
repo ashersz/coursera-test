@@ -26,7 +26,11 @@
     service.getMenuItem = function (menu_item) {
       return $http.get(ApiPath + '/menu_items/' + menu_item + '.json').then(function (response) {
         return response.data
-      })
+      },
+    function (error) {
+      console.log('error= ' + error.statusText)
+      return 'No such menu number exists'
+    })
     }
   }
 })()

@@ -8,15 +8,17 @@ email: {{ $ctrl.userinfo.email }}
 <div>
 tel: {{ $ctrl.userinfo.phone }}
 </div>
-<h4>
-menu item preferred
-</h4>
-<div>
-name: {{ $ctrl.userinfo.menu_item.name }}
-</div>
-<div>
-<img ng-src="{{ $ctrl.userinfo.menu_item.image_path }}"/>
-</div>
-<div>
-description: {{ $ctrl.userinfo.menu_item.description }}
+<div ng-if="$ctrl.userinfo.menu_item">
+  <h4>
+  menu item preferred
+  </h4>
+  <div>
+  name: {{ $ctrl.userinfo.menu_item.name }}
+  </div>
+  <div>
+  <img ng-src="{{ $ctrl.userinfo.menu_item.image_path }}"/>
+  </div>
+  <div>
+  description: {{ $ctrl.userinfo.menu_item.description }}
+  </div>
 </div>

@@ -9,18 +9,23 @@
     var reg = this
     reg.checkmemu_item = function () {
       reg.message = ''
-      reg.user.menu_item = {}
+      reg.completed = false
+      reg.info = ''
       MenuService.getMenuItem(reg.user.menu_item_name).then(function (response) {
-        reg.user.menu_item = response
-      }, function (error) {
-        console.log('error= ' + error.statusText)
-        reg.message = 'No such menu number exists'
+        if (typeof response === 'object') {
+          reg.user.menu_item = response
+        } else {
+          reg.message = response
+        }
+        if (reg.completed) {
+          UserInfoService.setUserInfo(reg.user)
+        }
       })
     }
     reg.submit = function () {
       reg.completed = true
-      reg.info = 'Your information has been saved'
       UserInfoService.setUserInfo(reg.user)
+      reg.info = 'Your information has been saved'
     }
   }
 })()
